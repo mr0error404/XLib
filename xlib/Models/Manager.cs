@@ -15,8 +15,7 @@ namespace consoleXLib
 
         [ForeignKey("Role")]
         public int RoleId { get; set; }
-        public Role? Role { get; set; }
-
+      
         [Required]
         [MinLength(6)]
         public string Password { get; set; }
@@ -30,11 +29,11 @@ namespace consoleXLib
         public string Email { get; set; }
 
         // Constructor
-        public Manager(int managerId, string username, int roleId, string password, string mobile, string email)
+        public Manager(int managerId, string username, Role role, string password, string mobile, string email)
         {
             ManagerId = managerId;
             Username = username;
-            RoleId = roleId;
+            RoleId = role?.RoleId ?? 0;
             Password = password;
             Mobile = mobile;
             Email = email;

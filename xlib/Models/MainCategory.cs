@@ -19,8 +19,10 @@ namespace consoleXLib
         public virtual ICollection<SubCategory> SubCategories { get; set; }
 
         // Constructor
-        public MainCategory()
+        public MainCategory(int categoryId, string? categoryName)
         {
+            CategoryId = categoryId;
+            CategoryName = categoryName;
             SubCategories = new List<SubCategory>();
         }
 

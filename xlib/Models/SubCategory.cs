@@ -13,16 +13,18 @@ namespace consoleXLib
 
         [Required]
         [StringLength(50)]
-        public string SubcategoryName { get; set; }
+        public string? SubcategoryName { get; set; }
 
         // Foreign Key
         [ForeignKey("MainCategory")]
         public int MainCategoryId { get; set; }
-        public MainCategory MainCategory { get; set; }
+        public MainCategory ?MainCategory { get; set; }
 
         // Constructor
-        public SubCategory()
+        public SubCategory(string subcategoryName, int mainCategoryId)
         {
+            SubcategoryName = subcategoryName;
+            MainCategoryId = mainCategoryId;
         }
 
         // Methods

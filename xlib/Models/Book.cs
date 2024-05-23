@@ -12,19 +12,19 @@ namespace consoleXLib
 
         [Required]
         [StringLength(100)]
-        public string Title { get; set; }
+        public string ?Title { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string Author { get; set; }
+        public string? Author { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string Publisher { get; set; }
+        public string ?Publisher { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string Type { get; set; }
+        public string? Type { get; set; }
 
         [Required]
         public bool Availability { get; set; }
@@ -33,7 +33,7 @@ namespace consoleXLib
         [Range(1, int.MaxValue)]
         public int NumberOfCopies { get; set; }
 
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
         public bool? isShow { get; set; }
 
@@ -58,6 +58,22 @@ namespace consoleXLib
             context.Books.Add(book);
             context.SaveChanges();
             Console.WriteLine("Book added successfully.");
+        }
+        // Constructor
+        public Book(int bookId, string title, string author, string publisher, string type, bool availability, int numberOfCopies, string description, bool? isShow, int mainCategoryId, int subCategoryId, int bookStateId)
+        {
+            BookId = bookId;
+            Title = title;
+            Author = author;
+            Publisher = publisher;
+            Type = type;
+            Availability = availability;
+            NumberOfCopies = numberOfCopies;
+            Description = description;
+            this.isShow = isShow;
+            MainCategoryId = mainCategoryId;
+            SubCategoryId = subCategoryId;
+            BookStateId = bookStateId;
         }
 
         public void EditBook(ApplicationDbContext context, Book book)

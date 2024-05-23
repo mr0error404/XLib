@@ -1,4 +1,33 @@
-﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{8A90C482-BF02-4FF5-8E14-C6521FB8E7F4}|https">
-  <MonoDevelop.Ide.ItemProperties.xlib PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+﻿<Properties StartupConfiguration="{8A90C482-BF02-4FF5-8E14-C6521FB8E7F4}|https" GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workbench ActiveDocument="xlib/Models/Role.cs">
+    <Files>
+      <File FileName="xlib/Models/SubCategory.cs" Line="12" Column="33" />
+      <File FileName="xlib/Models/MainCategory.cs" Line="1" Column="1" />
+      <File FileName="xlib/Models/Manager.cs" Line="1" Column="1" />
+      <File FileName="xlib/Models/Role.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="xlib" expanded="True">
+            <Node name="xlib">
+              <Node name="Models" expanded="True">
+                <Node name="Role.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.xlib PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
 </Properties>
