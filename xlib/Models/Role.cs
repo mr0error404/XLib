@@ -2,7 +2,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-
 namespace consoleXLib
 {
     public class Role
@@ -10,7 +9,7 @@ namespace consoleXLib
         [Key]
         public int RoleId { get; set; }
 
-        [Required] 
+        [Required]
         [StringLength(60)]
         public string SubcategoryName { get; set; }
 
@@ -20,11 +19,42 @@ namespace consoleXLib
             SubcategoryName = subcategoryName;
         }
 
-        public void AssignRole() { }
+        public void AssignRole(ApplicationDbContext context, int userId)
+        {
+            var user = context.Users.Find(userId);
+            if (user != null)
+            {
+                user.RoleId = RoleId;
+                context.SaveChanges();
+                Console.WriteLine("Role assigned successfully.");
+            }
+            else
+            {
+                Console.WriteLine("User not found.");
+            }
+        }
 
-        public void RevokeRole() { }
+        public void RevokeRole(ApplicationDbContext context, int userId)
+        {
+            var user = context.Users.Find(userId);
+            if (user != null)
+            {
+                user.RoleId = 0; // Assuming 0 or a specific RoleId means no role assigned
+                context.SaveChanges();
+                Console.WriteLine("Role revoked successfully.");
+            }
+            else
+            {
+                Console.WriteLine("User not found.");
+            }
+        }
 
-        public void EditRole() { }
+        public void EditRole(ApplicationDbContext context, string newSubcategoryName)
+        {
+            SubcategoryName = newSubcategoryName;
+            context.Roles.Update(this);
+            context.SaveChanges();
+            Console.WriteLine("Role updated successfully.");
+        }
     }
 }
-

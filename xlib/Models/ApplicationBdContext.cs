@@ -9,7 +9,7 @@ namespace consoleXLib
            optionsBuilder.UseSqlServer("Data Source=YNS-ALJALAM\\SQLEXPRESS;Integrated Security=True");
 
         public DbSet<Book> Books { get; set; }
-        public DbSet<BookState> BookStates { get; set; }
+        public DbSet<BookState> ?BookStates { get; set; }
         public DbSet<Laibrarian> Laibrarians { get; set; }
         public DbSet<MainCategory> MainCategories { get; set; } 
         public DbSet<Manager> Manager { get; set; }

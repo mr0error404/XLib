@@ -25,14 +25,26 @@ namespace consoleXLib
         }
 
         // Methods
-        public void CreateStatus()
+        public void CreateStatus(ApplicationDbContext context, BookState bookState)
         {
-
+            context.BookStates.Add(bookState);
+            context.SaveChanges();
+            Console.WriteLine("Book state created successfully.");
         }
 
-        public void UpdateStatus()
+        public void UpdateStatus(ApplicationDbContext context, int statusId, string newStatusName)
         {
-
+            var bookState = context.BookStates.Find(statusId);
+            if (bookState != null)
+            {
+                bookState.StatusName = newStatusName;
+                context.SaveChanges();
+                Console.WriteLine("Book state updated successfully.");
+            }
+            else
+            {
+                Console.WriteLine("Book state not found.");
+            }
         }
     }
 }

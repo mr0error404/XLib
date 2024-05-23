@@ -75,54 +75,54 @@ namespace consoleXLib
 
         public static MainCategory SearchCategory(ApplicationDbContext context, int categoryId)
         {
-            return context.MainCategorys.Find(categoryId);
+            return context.MainCategories.Find(categoryId);
         }
 
         public static void AddCategory(ApplicationDbContext context, MainCategory category)
         {
-            context.MainCategorys.Add(category);
+            context.MainCategories.Add(category);
             context.SaveChanges();
         }
 
         public static void EditCategory(ApplicationDbContext context, MainCategory category)
         {
-            context.MainCategorys.Update(category);
+            context.MainCategories.Update(category);
             context.SaveChanges();
         }
 
         public static void DeleteCategory(ApplicationDbContext context, int categoryId)
         {
-            var category = context.MainCategorys.Find(categoryId);
+            var category = context.MainCategories.Find(categoryId);
             if (category != null)
             {
-                context.MainCategorys.Remove(category);
+                context.MainCategories.Remove(category);
                 context.SaveChanges();
             }
         }
 
         public static SubCategory SearchSubCategory(ApplicationDbContext context, int subCategoryId)
         {
-            return context.SubCategorys.Find(subCategoryId);
+            return context.SubCategories.Find(subCategoryId);
         }
 
         public static void AddSubCategory(ApplicationDbContext context, SubCategory subCategory)
         {
-            context.SubCategorys.Add(subCategory);
+            context.SubCategories.Add(subCategory);
             context.SaveChanges();
         }
 
         public static void EditSubCategory(ApplicationDbContext context, SubCategory subCategory)
         {
-            context.SubCategorys.Update(subCategory);
+            context.SubCategories.Update(subCategory);
             context.SaveChanges();
         }
 
         public static void DeleteSubCategory(ApplicationDbContext context, int subCategoryId)
         {
-            var subCategory = context.SubCategorys.Find(subCategoryId);
+            var subCategory = context.SubCategories.Find(subCategoryId);
             if (subCategory != null)
             {
-                context.SubCategorys.Remove(subCategory);
+                context.SubCategories.Remove(subCategory);
                 context.SaveChanges();
             }
         }
