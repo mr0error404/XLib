@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/macbookpro/Downloads/JADARA/JADARA_Sim_2_2023_2024/تطوير البرمجيات و توثيقها /project/finalxlib/xlib/xlib/xlib.csproj": {}
+    "/Users/macbookpro/Downloads/JADARA/JADARA_Sim_2_2023_2024/تطوير البرمجيات و توثيقها /codeMVCProject/XLib/xlib/xlib.csproj": {}
   },
   "projects": {
-    "/Users/macbookpro/Downloads/JADARA/JADARA_Sim_2_2023_2024/تطوير البرمجيات و توثيقها /project/finalxlib/xlib/xlib/xlib.csproj": {
+    "/Users/macbookpro/Downloads/JADARA/JADARA_Sim_2_2023_2024/تطوير البرمجيات و توثيقها /codeMVCProject/XLib/xlib/xlib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/macbookpro/Downloads/JADARA/JADARA_Sim_2_2023_2024/تطوير البرمجيات و توثيقها /project/finalxlib/xlib/xlib/xlib.csproj",
+        "projectUniqueName": "/Users/macbookpro/Downloads/JADARA/JADARA_Sim_2_2023_2024/تطوير البرمجيات و توثيقها /codeMVCProject/XLib/xlib/xlib.csproj",
         "projectName": "xlib",
-        "projectPath": "/Users/macbookpro/Downloads/JADARA/JADARA_Sim_2_2023_2024/تطوير البرمجيات و توثيقها /project/finalxlib/xlib/xlib/xlib.csproj",
+        "projectPath": "/Users/macbookpro/Downloads/JADARA/JADARA_Sim_2_2023_2024/تطوير البرمجيات و توثيقها /codeMVCProject/XLib/xlib/xlib.csproj",
         "packagesPath": "/Users/macbookpro/.nuget/packages/",
-        "outputPath": "/Users/macbookpro/Downloads/JADARA/JADARA_Sim_2_2023_2024/تطوير البرمجيات و توثيقها /project/finalxlib/xlib/xlib/obj/",
+        "outputPath": "/Users/macbookpro/Downloads/JADARA/JADARA_Sim_2_2023_2024/تطوير البرمجيات و توثيقها /codeMVCProject/XLib/xlib/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/macbookpro/.nuget/NuGet/NuGet.Config"
@@ -38,6 +38,22 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.17, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

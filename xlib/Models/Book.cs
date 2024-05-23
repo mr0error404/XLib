@@ -35,6 +35,8 @@ namespace consoleXLib
 
         public string ?Description { get; set; }
 
+        public bool? isShow { get; set; }
+
         // Foreign Key
         [ForeignKey("MainCategory")]
         public int MainCategoryId { get; set; }
